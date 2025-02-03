@@ -32,6 +32,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "patch-package": "^8.0.0",
     "sst": "3.7.1"
   }
 }
