@@ -2,11 +2,11 @@
 
 const envs = {
   database: {
-    host: '{HOST}',
+    host: 'localhost',
     port: 5432,
-    username: '{USERNAME}',
+    username: 'anasmassnaoui',
     password: '',
-    database: '{DATABASE_NAME}',
+    database: 'anasmassnaoui',
   }
 }
 
@@ -31,10 +31,12 @@ export default $config({
     const api = new sst.aws.ApiGatewayV1("api");
     // initiate lambda function
     api.route("ANY /{proxy+}", {
-      bundle: '.',
-      handler: "apps/api/bundle/lambda.handler",
+      handler: "apps/api/dist/src/lambda.handler",
       runtime: 'nodejs22.x',
       url: true,
+      nodejs: {
+        format: 'cjs',
+      },
       environment: {
         DB_HOST: database.host,
         DB_PORT: database.port.apply(v => `${v}`),
