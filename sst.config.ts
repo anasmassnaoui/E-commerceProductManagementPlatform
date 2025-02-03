@@ -2,11 +2,11 @@
 
 const envs = {
   database: {
-    host: 'localhost',
+    host: '{HOST}',
     port: 5432,
-    username: 'anasmassnaoui',
+    username: '{USERNAME}',
     password: '',
-    database: 'anasmassnaoui',
+    database: '{DATABASE_NAME}',
   }
 }
 
