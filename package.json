@@ -10,9 +10,11 @@
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
+    "postinstall": "patch-package",
+    "preview": "sst dev --stage=dev",
+    "deploy": "sst deploy --stage=live",
     "test": "turbo test",
-    "test:e2e": "turbo test:e2e",
-    "postinstall": "patch-package"
+    "test:e2e": "turbo test:e2e"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

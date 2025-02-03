@@ -50,15 +50,15 @@ export function DeleteProductModal({
           </h3>
           <p className="text-red-400 text-sm mb-5">{error}</p>
           <div className="flex justify-center gap-4">
-            <Button color="failure" onClick={handleDelete}>
-              {loading ? 'Deleting product...' : "Yes, I'm sure"}
-            </Button>
             <Button
-              color="gray"
-              onClick={handleClose}
+              color="failure"
+              onClick={handleDelete}
               isProcessing={loading}
               disabled={loading}
             >
+              {loading ? 'Deleting product...' : "Yes, I'm sure"}
+            </Button>
+            <Button color="gray" onClick={handleClose}>
               No, cancel
             </Button>
           </div>

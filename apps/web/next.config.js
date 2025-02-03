@@ -2,7 +2,7 @@
 module.exports = {
   distDir: 'dist',
   output: "export",
-  trailingSlash: true,
+  // trailingSlash: true,
   assetPrefix: "/",
   images: {
     remotePatterns: [{
