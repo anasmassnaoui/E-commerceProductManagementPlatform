@@ -6,10 +6,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { Modules } from './modules';
 
+const AWS_LAMBDA = (process.env as any).AWS_LAMBDA_FUNCTION_NAME;
+
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      autoSchemaFile: join(
+        process.cwd(),
+        AWS_LAMBDA ? 'apps/api/src/schema.gql' : 'src/schema.gql',
+      ),
       driver: ApolloDriver,
       context: ({ req }) => ({ req }),
     }),

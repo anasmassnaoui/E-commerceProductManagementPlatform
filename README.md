@@ -15,6 +15,12 @@ After pulling the project repository, you'll need to install the dependencies. R
 yarn
 ```
 
+Build app, api, packages:
+
+   ```bash
+   yarn build
+   ```
+
 ## Setup
 
 ### Database Setup
@@ -72,7 +78,13 @@ To run the frontend, follow these steps:
 
    Replace `{SERVER_URL}` with the actual server URL (e.g., `http://localhost:3000`).
 
-2. Visit the application in your browser at [http://localhost:3000/graphql](http://localhost:3000/graphql).
+2. Run the development server:
+
+   ```bash
+   yarn run dev
+   ```
+
+3. Visit the application in your browser at [http://localhost:3000/graphql](http://localhost:3000/graphql).
 
 ## Local Deployment
 
